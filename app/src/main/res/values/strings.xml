@@ -1,0 +1,230 @@
+<resources>
+    <string name="app_name">Video Forensic Examiner</string>
+
+        <string name="title_activity_launcher">Audio Forensic Analysis</string>
+        <string name="title_activity_launcher2">Audio Forensic Analysis</string>
+        <string name="loading">Loading…</string>
+
+        <string name="privacy_statement">
+        <![CDATA[
+        <h2>Privacy Policy for Audio Forensic Analysis App</h2>
+        <p>Effective date: June 12, 2018</p>
+        <p>This page informs you of our policies regarding the collection, use, and disclosure of collected data when you use Audio Forensic Analysis app and the choices you have associated with that data.</p>
+        <p>By pressing "I Agree" for consent button during launching/activation of Audio Forensic Analysis App, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions.</p>
+        <h3>Information Collection and Use</h3>
+        <p>We collect very limited information that is only required to do research about designing, testing audio algorithms. Note that</p>
+        <p>* The audios you provide may be collected and used by Audio Forensic Analysis App (name of app) according to its signUpRequest privacy agreement or terms of service.</p>
+        <p>* This app will collect and process the minimum required data necessary for our research tasks. Except microphone, data of no other sensor such as camera, GPS etc. will be processed or stored at server end.</p>
+        <p>* Additionally, data of no other application installed on signUpRequest\'s device will be retrieved or stored on server.</p>
+        <p>* No device specific personally identifiable information such as IMEI number, MAC address, or mobile phone number will be stored on our servers.</p>
+        <p>* Audio Forensic Analysis apps will not collect any kind of data in deactivate mode.</p>
+        <p>* Only data and meta-data of microphone will be collected recorded audio.</p>
+        <p>* Only recorded audio will be processed, stored and shared for research purpose.</p>
+        <p>* Except microphone, data of no other sensor such as camera, GPS etc. will be processed or stored at our servers. You may deactivate the device\'s location services</p>
+        <p>* No personal information will be sent to Web Server either for processing or for storage. Recorded audio and microphone metadata will be collected through this App.</p>
+        <p>* Audio recording can capture environmental sounds or human speech without any personal identifier information.</p>
+        <p>* Your confidentiality will be kept to the degree permitted by the technology being used.</p>
+        <p>* No guarantees can be made regarding the interception of data sent via the Internet by any third party.</p>
+        <p>* Data may exist on backups or server logs beyond the time frame of this research project.</p>
+
+        <h3>Types of Data Collected</h3>
+        <p>Personal Data</p>
+        <p>While using Audio Forensic Analysis App, we won\'t ask you to provide us with any personally identifiable information such as social security number, home address, etc., that can be used to contact or identify you ("Personal Data"). We will use manual filtering to remove any direct personal identifiable information from uploaded audio files.</p>
+        <p>Usage Data</p>
+        <p>* When you access the Audio Forensic Analysis App by or through a mobile device, this Usage Data may include following information: the IP address of your mobile device, and your mobile operating system.</p>
+        <p>Tracking Cookies Data</p>
+        <p>Audio Forensic Analysis App doesn\'t use cookies or other tracking elements</p>
+        <p>Use of Data</p>
+        <p>Audio Forensic Analysis App uses the collected data for various purposes:</p>
+        <p>* Since public IP address will be part of received packet, we will use that to classify the data based on City/State/country. No street address will be taken from signUpRequest or stored on server.</p>
+        <p>* Collected and manually cleaned audio recording using this App will also be shared with other researchers.</p>
+
+        <h3>Transfer of Data</h3>
+        <p>Your information, including personal data, may be transferred to - and maintained on computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from your jurisdiction.</p>
+        <p>If you are located outside United States and choose to provide information to us, please note that remove your data from our dataset.</p>
+        <p>Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.</p>
+        <h3>Disclosure of Data</h3>
+        <p>Legal Requirements</p>
+        <p>Collected data through Audio Forensic Analysis App may be disclosed in the good faith belief that such action is necessary to:</p>
+        <p>* To comply with a legal obligation</p>
+        <p>* To protect and defend the rights or property of Forensic Examiner</p>
+        <p>* To prevent or investigate possible wrongdoing in connection with the Service</p>
+        <p>* To protect the personal safety of users of the Service or the public</p>
+        <p>* To protect against legal liability</p>
+        <p>Security of Data</p>
+        <p>The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Data, we cannot guarantee its absolute security.</p>
+        <p>Service Providers</p>
+        <p>* These are not third party apps. The Audio Forensic Analysis App is created specifically for this study.</p>
+        <p>Links to other Sites</p>
+        <p>There is no link to other website or app from Audio Forensic Analysis App.</p>
+        <p>Children\'s Privacy</p>
+        <p>Only individuals 18 years of age or older can participate. If the subjects are not legal adults in the states where they live we will request a waiver of parental consent.</p>
+        <p>Changes to This Privacy Policy</p>
+        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+        <p>We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the "effective date" at the top of this Privacy Policy.</p>
+        <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+        <h3>Contact Us</h3>
+        <p>If you have any questions about this Privacy Policy, please contact us:</p>
+        <p>* By email: mahmood@oakland.edu</p>
+        ]]>
+    </string>
+
+        <string name="terms_of_use">
+        <![CDATA[
+        <h1>Terms of Use for Audio Forensic Analysis App</h1>
+
+        <p>Last updated June 19, 2018</p>
+
+        <h3>AGREEMENT TO TERMS</h3>
+        <p>These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and Oakland University ("we," "us" or "our"), concerning your access to and use of the Audio Forensic Analysis app. You agree that by accessing the App, you have read, understood, and agreed to be bound by all of these Terms of Use. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS OF USE, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE APP AND YOU MUST DISCONTINUE USE IMMEDIATELY.</p>
+
+        <p>Supplemental terms and conditions or documents that may be posted on the App from time to time are hereby expressly incorporated herein by reference. We reserve the right, in our sole discretion, to make changes or modifications to these Terms of Use at any time and for any reason. We will alert you about any changes by updating the "Last updated" date of these Terms of Use, and you waive any right to receive specific notice of each such change. It is your responsibility to periodically review these Terms of Use to stay informed of updates. You will be subject to, and will be deemed to have been made aware of and to have accepted, the changes in any revised Terms of Use by your continued use of the App after the date such revised Terms of Use are posted.</p>
+
+        <h3>USER REPRESENTATIONS</h3>
+        <p>By using the App, you represent and warrant that: (1) you have the legal capacity and you agree to comply with these Terms of Use; (2) you are not a minor in the jurisdiction in which you reside; (3) you will not use the App for any illegal or unauthorized purpose; and (5) your use of the App will not violate any applicable law or regulation.</p>
+
+        <h3>PROHIBITED ACTIVITIES</h3>
+        <p>You may not access or use the App for any purpose other than that for which we make the App available. The App may not be used in connection with any commercial endeavors.</p>
+
+        <p>As a signUpRequest of the App, you agree not to:</p>
+
+        <p>1. Systematically retrieve data or other content from the App to create or compile, directly or indirectly, a collection, compilation, database, or directory without written permission from us.</p>
+        <p>2. Use the App in a manner inconsistent with any applicable laws or regulations.</p>
+        <p>3. Disparage, tarnish, or otherwise harm, in our opinion, us and/or the App.</p>
+        <p>4. Upload or transmit (or attempt to upload or to transmit) any material that acts as a passive or active information collection or transmission mechanism, including without limitation, clear graphics interchange formats ("gifs"), 1x1 pixels, web bugs, cookies, or other similar devices (sometimes referred to as "spyware" or "passive collection mechanisms" or "pcms").</p>
+        <p>5. Upload or transmit (or attempt to upload or to transmit) viruses, Trojan horses, or other material, including excessive use of capital letters and spamming (continuous posting of repetitive text), that interferes with any party\'s uninterrupted use and enjoyment of the App or modifies, impairs, disrupts, alters, or interferes with the use, features, functions, operation, or maintenance of the App.</p>
+        <p>6. Decipher, decompile, disassemble, or reverse engineer any of the software comprising or in any way making up a part of the App.</p>
+        <p>7. Use any information obtained from the App in order to harass, abuse, or harm another person.</p>
+        <p>8. Interfere with, disrupt, or create an undue burden on the App or the networks or services connected to the App.</p>
+        <p>9. Engage in any automated use of the system, such as using scripts to send comments or messages, or using any data mining, robots, or similar data gathering and extraction tools.</p>
+
+        <h3>USER GENERATED CONTRIBUTIONS</h3>
+        <p>When you create or make available any Contributions (i.e. audio files), you thereby represent and warrant that:</p>
+
+        <p>1. The creation, distribution, transmission, or performance, and the accessing, downloading, or copying of your Contributions do not and will not infringe the proprietary rights, including but not limited to the copyright, patent, trademark, trade secret, or moral rights of any third party.</p>
+        <p>2. Your Contributions are not obscene, lewd, lascivious, filthy, violent, harassing, libelous, slanderous, or otherwise objectionable (as determined by us).</p>
+        <p>3. Your Contributions do not ridicule, mock, disparage, intimidate, or abuse anyone.</p>
+        <p>4. Your Contributions do not advocate the violent overthrow of any government or incite, encourage, or threaten physical harm against another.</p>
+        <p>5. Your Contributions do not violate any applicable law, regulation, or rule.</p>
+        <p>6. Your Contributions do not violate the privacy or publicity rights of any third party.</p>
+        <p>7. Your Contributions do not include any offensive comments that are connected to race, national origin, gender, sexual preference, or physical handicap.</p>
+        <p>8. Your Contributions do not otherwise violate, or link to material that violates, any provision of these Terms of Use, or any applicable law or regulation. Any use of the App in violation of the foregoing violates these Terms of Use and may result in, among other things, termination or suspension of your rights to use the App.</p>
+
+        <h3>CONTRIBUTION LICENSE</h3>
+        <p>By posting your Contributions, you automatically grant, and you represent and warrant that you have the right to grant, to us an unrestricted, unlimited, irrevocable, perpetual, non-exclusive, transferable, royalty-free, fully-paid, worldwide right, and license to host, use, copy, reproduce, disclose, sell, resell, publish, broadcast, retitle, archive, store, cache, publicly perform, publicly display, reformat, translate, transmit, excerpt (in whole or in part), and distribute such Contributions (including, without limitation, your image and voice) for any purpose, commercial, advertising, or otherwise, and to prepare derivative works of, or incorporate into other works, such Contributions, and grant and authorize sublicenses of the foregoing.</p>
+        <p>You waive all moral rights in your Contributions, and you warrant that moral rights have not otherwise been asserted in your Contributions.</p>
+        <p>We do not assert any ownership over your Contributions. You retain full ownership of all of your Contributions and any intellectual property rights or other proprietary rights associated with your Contributions. We are not liable for any statements or representations in your Contributions provided by you in any area on the App. You are solely responsible for your Contributions to the App and you expressly agree to exonerate us from any and all responsibility and to refrain from any legal action against us regarding your Contributions.</p>
+
+        <p>We have the right, in our sole and absolute discretion, (1) to edit, redact, or otherwise change any Contributions; (2) to re-categorize any Contributions to place them in more appropriate locations on the App; and (3) to prescreen or delete any Contributions at any time and for any reason, without notice. We have no obligation to monitor your Contributions.</p>
+
+        <h3>MOBILE APPLICATION LICENSE</h3>
+        <p><strong>Use License</strong></p>
+        <p>we grant you a revocable, non-exclusive, non-transferable, limited right to install and use the mobile application on wireless electronic devices owned or controlled by you, and to access and use the mobile application on such devices strictly in accordance with the terms and conditions of this mobile application license contained in these Terms of Use. You shall not: (1) decompile, reverse engineer, disassemble, attempt to derive the source code of, or decrypt the application; (2) make any modification, adaptation, improvement, enhancement, translation, or derivative work from the application; (3) violate any applicable laws, rules, or regulations in connection with your access or use of the application; (4) remove, alter, or obscure any proprietary notice (including any notice of copyright or trademark) posted by us or the licensors of the application; (5) use the application for any revenue generating endeavor, commercial enterprise, or other purpose for which it is not designed or intended.</p>
+
+        <p><strong>Apple and Android Devices</strong></p>
+        <p>The following terms apply when you use a mobile application obtained from either the Apple Store or Google Play (each an "App Distributor") to access the App: (1) the license granted to you for our mobile application is limited to a non-transferable license to use the application on a device that utilizes the Apple iOS or Android operating systems, as applicable, and in accordance with the usage rules set forth in the applicable App Distributor\'s terms of service; (2) we are responsible for providing any maintenance and support services with respect to the mobile application as specified in the terms and conditions of this mobile application license contained in these Terms of</p>
+        <p>Use or as otherwise required under applicable law, and you acknowledge that each App Distributor has no obligation whatsoever to furnish any maintenance and support services with respect to the mobile application; (3) you represent and warrant that (i) you are not located in a country that is subject to a U.S. government embargo, or that has been designated by the U.S. government as a "terrorist supporting" country and (ii) you are not listed on any U.S. government list of prohibited or restricted parties; and (4) You must not be in violation of their wireless data service agreement when using the mobile application.</p>
+
+        <h3>SUBMISSIONS of Audio files</h3>
+        <p>You acknowledge and agree that any questions, comments, suggestions, ideas, feedback, or other information regarding the App ("Submissions") provided by you to us are non-confidential.</p>
+        <p>We shall own exclusive rights to use them in our research, and shall be entitled to the unrestricted use and dissemination of these Submissions for any lawful purpose (e.g. sharing with other researchers), without acknowledgment or compensation to you. You hereby waive all moral rights to any such Submissions, and you hereby warrant that you have the right to submit such Submissions. You agree there shall be no recourse against us for any alleged or actual infringement or misappropriation of any proprietary right in your Submissions.</p>
+
+        <p>APP MANAGEMENT</p>
+        <p>We reserve the right, but not the obligation, to: (1) monitor the App for violations of these Terms of Use; (2) take appropriate legal action against anyone who, in our sole discretion, violates the law or these Terms of Use, including without limitation, reporting such signUpRequest to law enforcement authorities; (3) in our sole discretion and without limitation, refuse, restrict access to, limit the availability of, or disable (to the extent technologically feasible) any of your Contributions or any portion thereof; (4) in our sole discretion and without limitation, notice, or liability, to remove all files and content that are excessive in size or are in any way burdensome to our systems; and (5) otherwise manage the App in a manner designed to protect our rights and property and to facilitate the proper functioning of the App.</p>
+
+        <h3>COPYRIGHT INFRINGEMENTS</h3>
+        <p>We respect the intellectual property rights of others. If you believe that any material available on or through the App infringes upon any copyright you own or control, please immediately notify us using the contact information provided below (a "Notification"). A copy of your Notification will be sent to the person who posted or stored the material addressed in the Notification. Please be advised that pursuant to federal law you may be held liable for damages if you make material misrepresentations in a Notification. Thus, if you are not sure that material located on or linked to by the App infringes your copyright, you should consider first contacting an attorney.</p>
+
+        <h4>TERM AND TERMINATION</h4>
+        <p>These Terms of Use shall remain in full force and effect while you use the App. WITHOUT LIMITING ANY OTHER PROVISION OF THESE TERMS OF USE, WE RESERVE THE RIGHT TO, IN OUR SOLE DISCRETION AND WITHOUT NOTICE OR LIABILITY, DENY ACCESS TO AND USE OF THE APP (INCLUDING BLOCKING CERTAIN IP ADDRESSES), TO ANY PERSON FOR ANY REASON OR FOR NO REASON, INCLUDING WITHOUT LIMITATION FOR BREACH OF ANY REPRESENTATION, WARRANTY, OR COVENANT CONTAINED IN THESE TERMS OF USE OR OF ANY APPLICABLE LAW OR REGULATION. WE MAY TERMINATE YOUR USE OR PARTICIPATION IN THE APP OR DELETE ANY CONTENT OR INFORMATION THAT YOU POSTED AT ANY TIME, WITHOUT WARNING, IN OUR SOLE DISCRETION.</p>
+
+        <h4>MODIFICATIONS AND INTERRUPTIONS</h4>
+        <p>We reserve the right to change, modify, or remove the contents of the App at any time or for any reason at our sole discretion without notice. However, we have no obligation to update any information on our App. We also reserve the right to modify or discontinue all or part of the App without notice at any time. We will not be liable to you or any third party for any modification, suspension, or discontinuance of the App.</p>
+        <p>We cannot guarantee the App will be available at all times. We may experience hardware, software, or other problems or need to perform maintenance related to the App, resulting in interruptions, delays, or errors. We reserve the right to change, revise, update, suspend, discontinue, or otherwise modify the App at any time or for any reason without notice to you. You agree that we have no liability whatsoever for any loss, damage, or inconvenience caused by your inability to access or use the App during any downtime or discontinuance of the App. Nothing in these Terms of Use will be construed to obligate us to maintain and support the App or to supply any corrections, updates, or releases in connection therewith.</p>
+
+        <h4>CORRECTIONS</h4>
+        <p>There may be information on the App that contains typographical errors, inaccuracies, or omissions, including descriptions, pricing, availability, and various other information. We reserve the right to correct any errors, inaccuracies, or omissions and to change or update the information on the App at any time, without prior notice.</p>
+
+        <h4>DISCLAIMER</h4>
+        <p>THE APP IS PROVIDED ON AN AS-IS AND AS-AVAILABLE BASIS. YOU AGREE THAT YOUR USE OF THE APP AND OUR SERVICES WILL BE AT YOUR SOLE RISK. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, IN CONNECTION WITH THE APP AND YOUR USE THEREOF, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE WILL ASSUME NO LIABILITY OR</p>
+        <p>RESPONSIBILITY FOR ANY (1) ERRORS, MISTAKES, OR INACCURACIES OF CONTENT AND MATERIALS, (2) PERSONAL INJURY OR PROPERTY DAMAGE, OF ANY NATURE WHATSOEVER, RESULTING FROM YOUR ACCESS TO AND USE OF THE APP, (3) ANY UNAUTHORIZED ACCESS TO OR USE OF OUR SECURE SERVERS AND/OR ANY AND ALL PERSONAL INFORMATION AND/OR FINANCIAL INFORMATION STORED THEREIN, (4) ANY</p>
+        <p>INTERRUPTION OR CESSATION OF TRANSMISSION TO OR FROM THE APP,(5) ANY BUGS, VIRUSES, TROJAN HORSES, OR THE LIKE WHICH MAY BE TRANSMITTED TO OR</p>
+        <p>THROUGH THE APP BY ANY THIRD PARTY, AND/OR (6) ANY ERRORS OR OMISSIONS IN ANY CONTENT AND MATERIALS OR FOR ANY LOSS OR DAMAGE OF ANY KIND INCURRED AS A RESULT OF THE USE OF ANY CONTENT POSTED, TRANSMITTED, OR OTHERWISE MADE AVAILABLE VIA THE APP.</p>
+
+        <h4>INDEMNIFICATION</h4>
+        <p>You agree to defend, indemnify, and hold us harmless, including our affiliates, and all of our respective officers, agents, partners, and employees, from and against any loss, damage, liability, claim, or demand, including reasonable attorneys\' fees and expenses, made by any third party due to or arising out of: (1) your Contributions; (2) use of the App; (3) breach of these Terms of Use; (4) any breach of your representations and warranties set forth in these Terms of Use; (5) your violation of the rights of a third party, including but not limited to intellectual property rights; or (6) any overt harmful act toward any other signUpRequest of the App with whom you connected via the App. Notwithstanding the foregoing, we reserve the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify us, and you agree to cooperate, at your expense, with our defense of such claims. We will use reasonable efforts to notify you of any such claim, action, or proceeding which is subject to this indemnification upon becoming aware of it.</p>
+
+        <h4>CONTACT US</h4>
+        <p>In order to resolve a complaint regarding the App or to receive further information regarding use of the App, please contact us at:</p>
+
+        <p>Oakland University</p>
+        <p>532 EC 115 Library Drive</p>
+        <p>Rochester, MI 48309-4479</p>
+        <p>United States</p>
+        <p>Phone: (248) 370 - 3542</p>
+        <p>mahmood@oakland.edu</p>
+        ]]>
+    </string>
+
+        <string name="consent_form">
+        <![CDATA[
+        <h1 style="text-align: center;">Oakland University &amp; University of Michigan-Dearborn</h1>
+        <h1 style="text-align: center;">INFORMED CONSENT</h1>
+        <h1 style="text-align: center;">ForensicExaminer: Testbed for Benchmarking Digital Audio Forensic</h1>
+
+        <p><strong>Title of the Project:</strong> ForensicExaminer: Testbed for Benchmarking Digital Audio Forensic</p>
+        <p><strong>Principal Investigator:</strong> Hafiz Malik, University of Michigan Dearborn</p>
+        <p><strong>Co-investigator:</strong> Khalid Mahmood Malik, Oakland University</p>
+        <p><strong>Faculty Advisor:</strong> Hafiz Malik, University of Michigan Dearborn</p>
+        <p><strong>Study Sponsor:</strong> National Science Foundation (NSF)</p>
+
+        <p>Purpose of the study: PI Hafiz Malik and Khalid Mahmood Malik invite you to participate in a research study about: The goal of this study is to design and develop benchmarking datasets for performance evaluation of existing audio forensic tools. The study is funded by National Science Foundation (NSF).</p>
+
+        <h3>Description of Subject Involvement:</h3>
+        <p>If you agree to be part of the research study, you will be asked to install Audio Forensic Analysis App on your smart-phone and record five audio samples of 5 mins or more and upload them to our data server. The Audio Forensic Analysis App will only use microphone of your smart-phone.</p>
+
+        <h3>Benefits:</h3>
+        <p>Although you may not directly benefit from being in this study, but society at large will benefit from this study, as digital forgery is growing and there is an urgent need to develop audio forensics analysis tools for forgery detection.</p>
+
+        <h3>Risks and Discomforts:</h3>
+        <p>There are no risks associated with this study because the data collection is completely anonymous, and the topic is not sensitive.</p>
+
+        <h3>Compensation:</h3>
+        <p>You will receive a $20 gift card for your participation in this study.</p>
+
+        <h3>Confidentiality:</h3>
+        <p>We plan to publish or present the results of this study but will not include any information that would identify you. There are some reasons why people other than the researchers may need to see information you provided as part of the study. This includes organizations responsible for making sure the research is done safely and properly such as the Dearborn IRB.</p>
+
+        <h3>Storage and Future use of Data:</h3>
+        <p>The audio data sets collected through this study will be stored on servers at the University of Michigan - Dearborn and the Oakland University.</p>
+
+        <h3>Period of Retention:</h3>
+        <p>Data will be retained for a minimum of three years after the conclusion of the award or three years after public release (publication), whichever is later. Data related to a student\'s research work will be retained for at</p>
+        <p>least three years after the degree is awarded. Data that support patents will be retained for the entire term of the patent. Longer periods will apply when questions arise from inquiries or investigations with respect to research.</p>
+
+        <p>The data collected through this study will also be made available (via University of Michigan DeepBule Library https://deepblue.lib.umich.edu/) to other researchers for other studies following the completion of this research study and will contain information that might identify you.</p>
+
+        <p>The researchers will dispose of your data by summer of 2023.</p>
+
+        <h3>Voluntary nature of the study</h3>
+        <p>Participating in this study is completely voluntary. Even if you decide to participate now, you may change your mind and stop at any time. If you decide to withdraw early, simply uninstall the App from your smart-phone and email Dr. Mahmood to remove your previously uploaded samples from our data server.</p>
+
+        <h3>Contact Information:</h3>
+        <p>If you have questions about this research, including questions about scheduling or your compensation for participating, you may contact</p>
+
+        <p>Khalid Mahmood Malik, PhD</p>
+        <p>Assistant Professor</p>
+        <p>Department of Computer Science and Engineering</p>
+        <p>532 EC 115 Library Drive Rochester MI 48309-4479</p>
+        <p>(248) 370-3542 (Direct Line)</p>
+
+        <p>If you have questions regarding your rights as a research participant, or wish to obtain information, ask questions, or discuss concerns with someone other than the researcher(s), You may contact the Dearborn IRB Administrator at (734) 763-5084. Written questions should be directed to the Office of Research and Sponsored Programs, 2066 IAVS, University of Michigan-Dearborn, Evergreen Rd., Dearborn, MI 48128-2406, (313) 593-5468; the Dearborn IRB Administrator at (734) 763-5084, or email Dearborn-IRB@umich.edu.</p>
+
+        <p>If you agree to participate in this study, please press "I Agree" button.</p>
+
+        <p>Do you agree to allow your audio data retention, please press "YES" button; you will be given an option to store electronic copy of this consent form for you to keep. If you would like to learn the findings of this study, please email me at (your email) and I will be happy to forward that information to you. Thank you for your participation in this study.</p>
+        ]]>
+    </string>
+        <string name="ok_text">OK</string>
+        <string name="forgot_password"><a href="http://10.0.2.2:8443/api/auth/forgotpassword">Forgot Password?</a></string>
+</resources>
