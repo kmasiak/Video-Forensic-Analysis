@@ -10,7 +10,7 @@ public class Preferences {
     private SharedPreferences preferences;
     private SharedPreferences.Editor editor;
 
-    private String FILE_NAME = "app.audioforensicanalysis.preferences";
+    private String FILE_NAME = "app.videoforensicanalysis.preferences";
     private int MODE = Context.MODE_PRIVATE;
 
     private String KEY_PRIVACY = "KEY_PRIVACY";
@@ -19,13 +19,9 @@ public class Preferences {
     private String KEY_GENDER = "KEY_GENER";
     private String KEY_IS_USER_LOGGED_IN = "KEY_IS_USER_LOGGED_IN";
     private String KEY_JWT_TOKEN = "KEY_JWT_TOKEN";
-    private String KEY_CORPUS_NUM = "KEY_CORPUS_NUM";
-    private String KEY_CORPUS_NUM_V2 = "KEY_CORPUS_NUM_V2";
-    private String KEY_CORPUS_V2_REPEAT = "KEY_CORPUS_V2_REPEAT";
-//    private String KEY_REC_ENV = "KEY_REC_ENV";
     private String KEY_FILES = "KEY_FILES";
     private String KEY_RECORDED_COUNT = "KEY_RECORDED_COUNT";
-    private String KEY_RECORDED_COUNT_V2 = "KEY_RECORDED_COUNT_V2";
+    private String KEY_CORPUS_NUM = "KEY_CORPUS_NUM";
 
     public Preferences(Context context) {
         mContext = context;
@@ -41,15 +37,6 @@ public class Preferences {
     public String getTerms() {
         return preferences.getString(KEY_TERMS, "NO");
     }
-
-//    public String getRecEnv() {
-//        return preferences.getString(KEY_REC_ENV, "Office");
-//    }
-//
-//    public void setRecEnv(String value) {
-//        editor.putString(KEY_REC_ENV, value);
-//        editor.commit();
-//    }
 
     public String getFiles() {
         return preferences.getString(KEY_FILES, "");
@@ -112,36 +99,12 @@ public class Preferences {
         return preferences.getInt(KEY_CORPUS_NUM, 1);
     }
 
-    public void setCorpusNumV2(int value) {
-        editor.putInt(KEY_CORPUS_NUM_V2, value);
-        editor.commit();
-    }
-    public int getCorpusNumV2(){
-        return preferences.getInt(KEY_CORPUS_NUM_V2, 6);
-    }
-
-    public void setCorpusRepeatNum(int value) {
-        editor.putInt(KEY_CORPUS_V2_REPEAT, value);
-        editor.commit();
-    }
-    public int getCorpusRepeatNum(){
-        return preferences.getInt(KEY_CORPUS_V2_REPEAT, 0);
-    }
-
     public void setRecordedCount(int value) {
         editor.putInt(KEY_RECORDED_COUNT, value);
         editor.commit();
     }
     public int getRecordedCount(){
         return preferences.getInt(KEY_RECORDED_COUNT, 0);
-    }
-
-    public void setRecordedCountV2(int value) {
-        editor.putInt(KEY_RECORDED_COUNT_V2, value);
-        editor.commit();
-    }
-    public int getRecordedCountV2(){
-        return preferences.getInt(KEY_RECORDED_COUNT_V2, 0);
     }
 
 }
