@@ -16,7 +16,7 @@ import com.example.videoforensicexaminer.R;
 public class InputMaskFragment extends DialogFragment {
     private static final String TAG = "DialogFragment";
     ImageButton cloth, surgical, n95, ffp2, ffp3, other;
-    Button none;
+    //Button none;
 
     private DialogInterface.OnDismissListener onDismissListener;
 
@@ -42,7 +42,7 @@ public class InputMaskFragment extends DialogFragment {
         ffp2 = view.findViewById(R.id.ffp2);
         ffp3 = view.findViewById(R.id.ffp3);
         other = view.findViewById(R.id.other);
-        none = view.findViewById(R.id.no_mask);
+        //none = view.findViewById(R.id.no_mask);
 
         createListener(cloth);
         createListener(surgical);
@@ -50,7 +50,7 @@ public class InputMaskFragment extends DialogFragment {
         createListener(ffp2);
         createListener(ffp3);
         createListener(other);
-        createListenerNone(none);
+        //createListenerNone(none);
 
         return view;
     }
@@ -81,14 +81,14 @@ public class InputMaskFragment extends DialogFragment {
                     case R.id.other:
                         maskType = "Other";
                         break;
-                    case R.id.no_mask:
-                        maskType = "None";
-                        break;
+                    //case R.id.no_mask:
+                    //    maskType = "None";
+                    //    break;
                 }
 
                 Intent intent = new Intent();
                 intent.putExtra("Mask Type", maskType);
-                getTargetFragment().onActivityResult(getTargetRequestCode(), 2, intent);
+                //getTargetFragment().onActivityResult(getTargetRequestCode(), 2, intent);
                 dismiss();
             }
         });
@@ -101,7 +101,7 @@ public class InputMaskFragment extends DialogFragment {
                 String maskType = "None";
                 Intent intent = new Intent();
                 intent.putExtra("Mask Type", maskType);
-                getTargetFragment().onActivityResult(getTargetRequestCode(), 2, intent);
+                //getTargetFragment().onActivityResult(getTargetRequestCode(), 2, intent);
                 dismiss();
             }
         });

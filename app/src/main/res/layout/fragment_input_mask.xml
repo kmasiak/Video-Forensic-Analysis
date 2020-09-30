@@ -155,14 +155,14 @@
                 android:textAlignment="center" />
         </LinearLayout>
     </LinearLayout>
-    <Button
+    <!--<Button
         android:id="@+id/no_mask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="No Mask"
         android:layout_margin="5dp"
         android:background="@color/colorPrimary"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"/-->
 
 
 </LinearLayout>

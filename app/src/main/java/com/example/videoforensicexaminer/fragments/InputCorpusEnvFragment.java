@@ -14,6 +14,7 @@ import androidx.fragment.app.DialogFragment;
 import com.example.videoforensicexaminer.R;
 
 public class InputCorpusEnvFragment extends DialogFragment {
+    /*
     private static final String TAG = "DialogFragment";
     ImageButton cloth, surgical, n95, ffp2, ffp3, other;
     Button none;
@@ -30,31 +31,14 @@ public class InputCorpusEnvFragment extends DialogFragment {
         if (onDismissListener != null) {
             onDismissListener.onDismiss(dialog);
         }
-    }
+    }*/
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_input_mask, null);
-
-        cloth = view.findViewById(R.id.cloth);
-        surgical = view.findViewById(R.id.surgical);
-        n95 = view.findViewById(R.id.n95);
-        ffp2 = view.findViewById(R.id.ffp2);
-        ffp3 = view.findViewById(R.id.ffp3);
-        other = view.findViewById(R.id.other);
-        none = view.findViewById(R.id.no_mask);
-
-        createListener(cloth);
-        createListener(surgical);
-        createListener(n95);
-        createListener(ffp2);
-        createListener(ffp3);
-        createListener(other);
-        createListenerNone(none);
-
+        View view = inflater.inflate(R.layout.fragment_input_env_corpus, null);
         return view;
     }
-
+/*
     public void createListener(final ImageButton btn) {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,9 +65,9 @@ public class InputCorpusEnvFragment extends DialogFragment {
                     case R.id.other:
                         maskType = "Other";
                         break;
-                    case R.id.no_mask:
-                        maskType = "None";
-                        break;
+                    //case R.id.no_mask:
+                    //    maskType = "None";
+                    //   break;
                 }
 
                 Intent intent = new Intent();
@@ -105,5 +89,5 @@ public class InputCorpusEnvFragment extends DialogFragment {
                 dismiss();
             }
         });
-    }
+    }*/
 }
