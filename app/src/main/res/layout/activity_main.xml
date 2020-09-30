@@ -6,25 +6,124 @@
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Your video contributions are very much appreciated and entirely voluntary. If you wish to participate, please record yourself reading text while wearing a facemask. More details about this can be found on the moodle class page. After you have recorded the videos, please click the 'Upload' button below to upload and submit your video recordings"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp"
-        android:padding="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/instructionTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your video contributions are very much appreciated and entirely voluntary. If you wish to participate, please record yourself reading text while wearing a facemask. More details about this can be found on the moodle class page. After you have recorded the videos, please click the 'Upload' button below to upload and submit your video recordings"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/environment_selection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/instructionTxt">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recording Environment"
+                android:textStyle="bold"
+                android:paddingStart="8dp"
+                tools:ignore="RtlSymmetry" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Classroom/Lab"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Office"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bedroom/Living Room"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kitchen"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Balcony/Outdoor"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ground/Open Environment"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cafeteria"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anechoic Room"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Studio"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vehicle"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other"/>
+        </RadioGroup>
+        <RadioGroup
+            android:id="@+id/mask_selection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/instructionTxt"
+            android:layout_toRightOf="@id/environment_selection"
+            android:paddingStart="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mask Type"
+                android:textStyle="bold"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cloth"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Surgical"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N95"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FFP2"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FFP3"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other"/>
+        </RadioGroup>
         <TextView
             android:id="@+id/file"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@id/midTxt"
+            android:layout_below="@+id/environment_selection"
             android:layout_centerHorizontal="true"
             android:padding="8dp"
             android:text=""/>
@@ -34,7 +133,7 @@
             android:layout_height="wrap_content"
             android:text="Upload"
             android:layout_toLeftOf="@id/midTxt"
-            android:layout_below="@id/midTxt"
+            android:layout_alignParentBottom="true"
             android:onClick="showVideoChooserDialog"
             style="@style/Widget.AppCompat.Button.Colored"
             android:background="@color/colorPrimaryDark"/>
@@ -44,15 +143,14 @@
             android:layout_height="wrap_content"
             android:text="SMILES"
             android:visibility="invisible"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"/>
+            android:layout_centerHorizontal="true" />
         <Button
             android:id="@+id/submitBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Submit"
             android:layout_toRightOf="@id/midTxt"
-            android:layout_below="@id/midTxt"
+            android:layout_alignParentBottom="true"
             android:layout_centerVertical="true"
             android:onClick="onSubmit"
             style="@style/Widget.AppCompat.Button.Colored"
