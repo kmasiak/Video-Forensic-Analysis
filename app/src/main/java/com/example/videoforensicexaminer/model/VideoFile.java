@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.Objects;
 
 public class VideoFile {
-    private int icon;
     private String fileName;
     private File file;
     private String corpusId;
@@ -16,8 +15,7 @@ public class VideoFile {
     public VideoFile() {
     }
 
-    public VideoFile(int play_btn, String fileName, File file) {
-        this.icon = play_btn;
+    public VideoFile(String fileName, File file) {
         this.fileName = fileName;
         this.file = file;
     }
@@ -36,16 +34,14 @@ public class VideoFile {
         return Objects.hash(getFileName());
     }
 
-    public VideoFile(int icon, String fileName, File file, String corpusId, String recordingEnv, boolean isMasked) {
-        this.icon = icon;
+    public VideoFile(String fileName, File file, String corpusId, String recordingEnv) {
         this.fileName = fileName;
         this.file = file;
         this.corpusId = corpusId;
         this.recordingEnv = recordingEnv;
     }
     //Constructor for VideoFile for use in V2 mask recordings
-    public VideoFile(int icon, String fileName, File file, String corpusId, String recordingEnv, String maskType, boolean isMasked){
-        this.icon = icon;
+    public VideoFile(String fileName, File file, String corpusId, String recordingEnv, String maskType){
         this.fileName = fileName;
         this.file = file;
         this.corpusId = corpusId;
@@ -68,14 +64,6 @@ public class VideoFile {
 
     public void setFile(File file) {
         this.file = file;
-    }
-
-    public int getIcon() {
-        return icon;
-    }
-
-    public void setIcon(int icon) {
-        this.icon = icon;
     }
 
     public VideoFile(String fileName) {

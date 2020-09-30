@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.videoforensicexaminer">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -9,17 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.AboutActivity"></activity>
+        <activity
+            android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.BaseActivity"/>
-        <activity android:name=".activities.ConsentActivity"/>
-        <activity android:name=".activities.PrivacyPolicyActivity"/>
-        <activity android:name=".activities.TermsOfUseActivity"/>
+        <activity
+            android:name=".activities.TermsOfUseActivity"
+            android:label="@string/title_activity_launcher" />
+        <activity
+            android:name=".activities.PrivacyPolicyActivity"
+            android:label="@string/title_activity_launcher2" />
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.SignUpActivity" />
+        <activity android:name=".activities.SignInActivity" />
+        <activity android:name=".activities.ConsentActivity"></activity>
     </application>
 
 </manifest>

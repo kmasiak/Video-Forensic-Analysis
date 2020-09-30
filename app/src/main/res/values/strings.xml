@@ -1,8 +1,32 @@
 <resources>
+
+    <string-array name="environment_array">
+        <item>Classroom/Lab</item>
+        <item>Office</item>
+        <item>Bedroom/Living Room</item>
+        <item>Balcony/Outdoor</item>
+        <item>Ground/Open Environment</item>
+        <item>Cafeteria</item>
+        <item>Anechoic Room</item>
+        <item>Studio</item>
+        <item>Vehicle</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="corpusID_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+
     <string name="app_name">Video Forensic Examiner</string>
 
-        <string name="title_activity_launcher">Audio Forensic Analysis</string>
-        <string name="title_activity_launcher2">Audio Forensic Analysis</string>
+        <string name="title_activity_launcher">Video Forensic Analysis</string>
+        <string name="title_activity_launcher2">Video Forensic Analysis</string>
         <string name="loading">Loading…</string>
 
         <string name="privacy_statement">

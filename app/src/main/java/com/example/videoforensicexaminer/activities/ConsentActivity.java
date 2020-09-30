@@ -2,6 +2,7 @@ package com.example.videoforensicexaminer.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
@@ -41,7 +42,7 @@ public class ConsentActivity extends BaseActivity {
                     preferences.setConsent("YES");
                     preferences.setPrivacy("YES");
                     preferences.setTerms("YES");
-                    Intent intent = new Intent(getBaseContext(), MainActivity.class);
+                    Intent intent = new Intent(getBaseContext(), AboutActivity.class);
                     startActivity(intent);
                 }
             });
