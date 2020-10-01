@@ -29,6 +29,7 @@ public interface VideoForensicApiService {
     Call<UploadFileResponse> uploadFile(@Header("recording-env") String recordingEnv,
                                         @Header("corpus-id") String corpusId,
                                         @Header("device-name") String deviceName,
+                                        @Header("mask-type") String maskType,
                                         @Part MultipartBody.Part files);
     @GET("video/files")
     Call<List<String>> listFilesForLoggedInUser();
