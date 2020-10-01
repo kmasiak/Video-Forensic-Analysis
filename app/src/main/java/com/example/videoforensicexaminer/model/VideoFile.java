@@ -47,7 +47,6 @@ public class VideoFile {
         this.corpusId = corpusId;
         this.recordingEnv = recordingEnv;
         this.maskType = maskType;
-        this.isMasked = isMasked;
     }
 
     public String getCorpusId() {
