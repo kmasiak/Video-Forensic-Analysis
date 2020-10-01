@@ -1,10 +1,13 @@
 package com.example.videoforensicexaminer.fragments;
 
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.videoforensicexaminer.R;
+import com.example.videoforensicexaminer.activities.MainActivity;
 
 public class InputMaskFragment extends DialogFragment {
     private static final String TAG = "DialogFragment";
@@ -86,13 +90,34 @@ public class InputMaskFragment extends DialogFragment {
                     //    break;
                 }
 
-                Intent intent = new Intent();
-                intent.putExtra("Mask Type", maskType);
+
+
+
+                //Intent intent = new Intent();
+                //intent.putExtra("Mask Type", maskType);
                 //getTargetFragment().onActivityResult(getTargetRequestCode(), 2, intent);
                 dismiss();
             }
         });
     }
+
+
+/*
+    public interface OnDataPass {
+        public void onDataPass(String data);
+    }
+
+    OnDataPass dataPasser;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        dataPasser = (OnDataPass) context;
+    }
+
+    public void passData(String data) {
+        dataPasser.onDataPass(data);
+    }*/
 
     public void createListenerNone(final Button btn) {
         btn.setOnClickListener(new View.OnClickListener() {
@@ -107,3 +132,4 @@ public class InputMaskFragment extends DialogFragment {
         });
     }
 }
+

@@ -15,15 +15,13 @@
             android:id="@+id/instructionTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Your video contributions are very much appreciated and entirely voluntary. If you wish to participate, please record yourself reading text while wearing a facemask. More details about this can be found on the moodle class page. After you have recorded the videos, please click the 'Upload' button below to upload and submit your video recordings"
+            android:text=""
             android:textStyle="bold"
-            android:layout_marginTop="16dp"
-            android:padding="8dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!--<RadioGroup
+        <RadioGroup
             android:id="@+id/environment_selection"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -118,7 +116,44 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Other"/>
-        </RadioGroup>-->
+        </RadioGroup>
+        <RadioGroup
+            android:id="@+id/corpus_selection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/mask_selection"
+            android:layout_toRightOf="@id/environment_selection"
+            android:paddingStart="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Script/Corpus"
+                android:textStyle="bold"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"/>
+        </RadioGroup>
         <TextView
             android:id="@+id/file"
             android:layout_width="wrap_content"

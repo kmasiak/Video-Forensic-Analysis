@@ -4,6 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import androidx.fragment.app.DialogFragment;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import retrofit2.Response;
+
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -30,9 +35,10 @@ import com.example.videoforensicexaminer.model.UploadFileResponse;
 import com.example.videoforensicexaminer.model.VideoFile;
 import com.example.videoforensicexaminer.utils.ApiUtils;
 import com.example.videoforensicexaminer.utils.Preferences;
-//import com.google.gson.Gson;
-//import com.google.gson.reflect.TypeToken;
-//import com.jaredrummler.android.device.DeviceName;
+import com.jaredrummler.android.device.DeviceName;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.jaredrummler.android.device.DeviceName;
 
 import org.json.JSONException;
 
@@ -42,12 +48,12 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-//import okhttp3.MediaType;
-//import okhttp3.MultipartBody;
-//import okhttp3.RequestBody;
-//import retrofit2.Call;
-//import retrofit2.Callback;
-//import retrofit2.Response;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -67,11 +73,19 @@ public class MainActivity extends AppCompatActivity {
 
     // function to show a dialog to select video file
     public void showVideoChooserDialog(View view) {
-        Intent intent = new Intent(
-                Intent.ACTION_PICK,
-                android.provider.MediaStore.Video.Media.EXTERNAL_CONTENT_URI);
-        intent.setType("video/*");
-        startActivityForResult(intent, 2);
+        recordingEnv = getRecordingEnv();
+        maskType = getMaskType();
+        corpusID = getCorpus();
+        if(recordingEnv == "" || maskType == "" || corpusID == "") {
+            Toast.makeText(this, "Please fill in all the required information before uploading.",
+                    Toast.LENGTH_LONG).show();
+        } else {
+            Intent intent = new Intent(
+                    Intent.ACTION_PICK,
+                    android.provider.MediaStore.Video.Media.EXTERNAL_CONTENT_URI);
+            intent.setType("video/*");
+            startActivityForResult(intent, 2);
+        }
     }
     
 
@@ -115,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void buildChoiceAlertViewCorpus() {
         InputCorpusEnvFragment frag = new InputCorpusEnvFragment();
+        frag.setTargetFragment(frag, 1);
         frag.show(getSupportFragmentManager().beginTransaction(),"DialogFragment");
     }
 
@@ -122,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        maskType = data.getStringExtra("Mask Type");
+        //maskType = data.getStringExtra("Mask Type");
         Uri selectedImage = data.getData();
         String[] filePath = {MediaStore.Video.Media.DATA};
         Cursor c = getContentResolver().query(selectedImage, filePath,
@@ -135,13 +150,18 @@ public class MainActivity extends AppCompatActivity {
         TextView txt = findViewById(R.id.file);
         txt.setText(videoPath);
         File vidfile = new File(videoPath);
-        buildChoiceAlertViewMask();
-        buildChoiceAlertViewEnv();
+        //buildChoiceAlertViewMask();
+        //buildChoiceAlertViewEnv();
         videofile = new VideoFile(videoPath.split("/")[videoPath.split("/").length-1], vidfile, corpusID, recordingEnv, maskType);
     }
 
     public void onSubmit(View view) {
-        handleUploadToServer(videofile);
+        if(videofile == null) {
+            Toast.makeText(this, "Please upload your video before submitting.",
+                    Toast.LENGTH_LONG).show();
+        } else {
+            handleUploadToServer(videofile);
+        }
     }
 
     private void handleUploadToServer(final VideoFile videoFile) {
@@ -211,9 +231,8 @@ public class MainActivity extends AppCompatActivity {
         });
         ad.show();
     }
-}
 
-/*  ONLY IF NEEDED FOR RADIOBUTTON SELECTION
+
     //Will return with empty String "" if no recording env is selected
     public String getRecordingEnv() {
         String[] recordingEnvOptions = {"Classroom/Lab", "Office", "Bedroom/Living Room", "Kitchen", "Balcony/Outdoor",
@@ -244,5 +263,21 @@ public class MainActivity extends AppCompatActivity {
             maskType = maskTypeOptions[id];
         }
         return maskType;
-    }*/
+    }
+
+    //Will return with empty String "" if no mask is selected
+    public String getCorpus() {
+        String[] maskTypeOptions = {"1", "2", "3", "4", "5", "6"};
+        RadioGroup corpusSelection = findViewById(R.id.corpus_selection);
+        int id = corpusSelection.getCheckedRadioButtonId();
+        String corpus;
+        if(id == -1) {
+            corpus = "";
+            System.out.println("No Corpus Is Selected");
+        } else {
+            id -= 18;
+            corpus = maskTypeOptions[id];
+        }
+        return corpus;
+    }
 }
