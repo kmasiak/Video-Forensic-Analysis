@@ -1,11 +1,17 @@
 package com.example.videoforensicexaminer.activities;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
 import com.example.videoforensicexaminer.adapters.VidedoFileAdapter;
+
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
@@ -16,10 +22,12 @@ import com.example.videoforensicexaminer.R;
 import com.example.videoforensicexaminer.model.VideoFile;
 import java.io.File;
 
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
-
+    private final int READ_FILE_REQUEST_CODE = 1;
     VideoFile videofile;
     Context context;
     String maskType, recordingEnv, corpusID;
@@ -40,12 +48,18 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Please fill in all the required information before uploading.",
                     Toast.LENGTH_LONG).show();
         } else {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{READ_EXTERNAL_STORAGE},READ_FILE_REQUEST_CODE);
             Intent intent = new Intent(
                     Intent.ACTION_PICK,
                     android.provider.MediaStore.Video.Media.EXTERNAL_CONTENT_URI);
             intent.setType("video/*");
             startActivityForResult(intent, 2);
         }
+    }
+
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)
+    {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
     // on activity result to get file from intent data
@@ -63,9 +77,11 @@ public class MainActivity extends AppCompatActivity {
         Log.d("SelectedVideoPath", videoPath);
         TextView txt = findViewById(R.id.file);
         txt.setText(videoPath);
+
         File vidfile = new File(videoPath);
 
-        videofile = new VideoFile(videoPath.split("/")[videoPath.split("/").length-1], vidfile, corpusID, recordingEnv, maskType);
+        Log.d("FILE:", String.valueOf(vidfile.canRead()));
+        videofile = new VideoFile(vidfile.getName(), vidfile, corpusID, recordingEnv, maskType);
     }
 
     public void onSubmit(View view) {
@@ -74,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.LENGTH_LONG).show();
         } else {
             VidedoFileAdapter videdoFileAdapter = new VidedoFileAdapter(MainActivity.this, videofile);
+            Toast.makeText(MainActivity.this, "Uploading " + videofile.getFileName() , Toast.LENGTH_SHORT).show();
             videdoFileAdapter.handleUploadToServer();
         }
     }

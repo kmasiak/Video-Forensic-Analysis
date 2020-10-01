@@ -57,8 +57,6 @@ public class VidedoFileAdapter {
 
     public void handleUploadToServer() {
         File file = this.videoFile.getFile();
-        Log.d("IS FILE READABLE", String.valueOf(file.canRead()));
-        Log.d("DOES FILE EXIST", String.valueOf(file.exists()));
         VideoForensicApiService service = RetrofitClientInstance.getRetrofitInstance(context).create(VideoForensicApiService.class);
 
         RequestBody fileReqBody = RequestBody.create(MediaType.parse("video/mp4"), file);
