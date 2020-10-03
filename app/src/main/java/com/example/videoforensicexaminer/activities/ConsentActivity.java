@@ -35,7 +35,7 @@ public class ConsentActivity extends BaseActivity {
             WebView myWebView = findViewById(R.id.consentWebview);
             myWebView.setWebChromeClient(webChromeClientWithProgressDialog);
             myWebView.setWebViewClient(defaultWebViewClient);
-            myWebView.loadUrl(Constants.API_BASE_URL+"/consent.html");
+            myWebView.loadUrl(Constants.API_BASE_URL+"/videoConsent.html");
             agreeBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

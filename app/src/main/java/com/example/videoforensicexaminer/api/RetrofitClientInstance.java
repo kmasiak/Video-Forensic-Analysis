@@ -27,7 +27,7 @@ public class RetrofitClientInstance {
 
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         // set your desired log level
-        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        logging.setLevel(HttpLoggingInterceptor.Level.BASIC);
 
         OkHttpClient httpClient = new OkHttpClient.Builder()
                 .addInterceptor(logging)
@@ -46,8 +46,8 @@ public class RetrofitClientInstance {
                         return chain.proceed(ongoing.build());
                     }
                 })
-                .connectTimeout(45, TimeUnit.SECONDS)
-                .readTimeout(45,TimeUnit.SECONDS).build();
+                .connectTimeout(120, TimeUnit.SECONDS)
+                .readTimeout(120,TimeUnit.SECONDS).build();
 
         if (retrofit == null) {
             retrofit = new retrofit2.Retrofit.Builder()

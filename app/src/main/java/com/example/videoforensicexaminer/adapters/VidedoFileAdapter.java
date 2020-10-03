@@ -7,8 +7,11 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import androidx.annotation.NonNull;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
+import android.widget.ProgressBar;
 
+import com.example.videoforensicexaminer.activities.MainActivity;
 import com.jaredrummler.android.device.DeviceName;
 
 import org.json.JSONException;
@@ -30,15 +33,15 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class VidedoFileAdapter {
-
+public class VidedoFileAdapter{
     Context context;
     VideoFile videoFile = null;
     private MediaPlayer mPlayer = null;
     Preferences preferences;
     final StringBuilder makeAndModel = new StringBuilder();
-
     private static final String TAG = "VideoFileAdapter";
+
+
 
     public VidedoFileAdapter(@NonNull Context context, @NonNull VideoFile object) {
         this.context = context;
@@ -57,6 +60,8 @@ public class VidedoFileAdapter {
 
     public void handleUploadToServer() {
         File file = this.videoFile.getFile();
+        MainActivity.progressBar.setVisibility(View.VISIBLE);
+        MainActivity.progressText.setVisibility(View.VISIBLE);
         VideoForensicApiService service = RetrofitClientInstance.getRetrofitInstance(context).create(VideoForensicApiService.class);
 
         RequestBody fileReqBody = RequestBody.create(MediaType.parse("video/mp4"), file);
@@ -69,6 +74,8 @@ public class VidedoFileAdapter {
         call.enqueue(new Callback<UploadFileResponse>() {
             @Override
             public void onResponse(Call<UploadFileResponse> call, Response<UploadFileResponse> response) {
+                MainActivity.progressBar.setVisibility(View.INVISIBLE);
+                MainActivity.progressText.setVisibility(View.INVISIBLE);
                 if (response.code() == 200 || response.code() == 201) {
                     showAlertDialog("Success",
                             "File uploaded successfully!", true);

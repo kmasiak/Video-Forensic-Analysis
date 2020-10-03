@@ -18,8 +18,13 @@ import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import com.example.videoforensicexaminer.R;
 import com.example.videoforensicexaminer.model.VideoFile;
+
+import org.w3c.dom.Text;
+
 import java.io.File;
 
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
@@ -31,12 +36,18 @@ public class MainActivity extends AppCompatActivity {
     VideoFile videofile;
     Context context;
     String maskType, recordingEnv, corpusID;
+    public static ProgressBar progressBar;
+    public static TextView progressText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.context = getApplicationContext();
+        progressBar = (ProgressBar) findViewById(R.id.progressBar1);
+        progressText = (TextView) findViewById(R.id.tView);
+        progressBar.setVisibility(View.INVISIBLE);
+        progressText.setVisibility(View.INVISIBLE);
     }
 
     // function to show a dialog to select video file
@@ -143,4 +154,15 @@ public class MainActivity extends AppCompatActivity {
         }
         return corpus;
     }
+
+    public  void progressOn(){
+            progressBar.setVisibility(View.VISIBLE);
+            progressText.setVisibility(View.VISIBLE);
+
+    }
+    public  void progressOff() {
+        progressBar.setVisibility(View.INVISIBLE);
+        progressText.setVisibility(View.INVISIBLE);
+    }
+
 }
