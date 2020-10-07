@@ -22,8 +22,9 @@ public class ConsentActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         final Preferences preferences = new Preferences(this);
         String consent = preferences.getConsent();
+        Log.d("CONSENT, LOGIN",consent + preferences.isUserLoggedIn());
         if (consent.equals("YES")) {
-            Intent intentLauncher = new Intent(this, MainActivity.class);
+            Intent intentLauncher = new Intent(this, AboutActivity.class);
             startActivity(intentLauncher);
         } else {
             //show terms to accept

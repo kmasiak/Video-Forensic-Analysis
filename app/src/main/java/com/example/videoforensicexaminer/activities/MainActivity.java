@@ -22,6 +22,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.example.videoforensicexaminer.R;
 import com.example.videoforensicexaminer.model.VideoFile;
+import com.example.videoforensicexaminer.utils.Preferences;
 
 import org.w3c.dom.Text;
 
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         progressText = (TextView) findViewById(R.id.tView);
         progressBar.setVisibility(View.INVISIBLE);
         progressText.setVisibility(View.INVISIBLE);
+
     }
 
     // function to show a dialog to select video file
@@ -165,4 +167,12 @@ public class MainActivity extends AppCompatActivity {
         progressText.setVisibility(View.INVISIBLE);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Preferences preferences = new Preferences(getApplicationContext());
+        Log.d("LOGIN?", preferences.isUserLoggedIn().toString());
+        preferences.setUserLoggedIn(false);
+        Log.d("LOGIN?", preferences.isUserLoggedIn().toString());
+    }
 }
