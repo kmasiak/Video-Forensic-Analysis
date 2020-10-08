@@ -21,9 +21,9 @@
         <item>5</item>
         <item>6</item>
     </string-array>
+what is
 
-
-    <string name="app_name">Video Forensic Examiner</string>
+    <string name="app_name">Video Forensic Analysis</string>
 
         <string name="title_activity_launcher">Video Forensic Analysis</string>
         <string name="title_activity_launcher2">Video Forensic Analysis</string>
