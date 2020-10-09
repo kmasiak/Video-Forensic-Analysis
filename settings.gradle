@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Video Forensic Examiner"
+rootProject.name = "Video Forensic Analysis"
