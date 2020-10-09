@@ -24,7 +24,7 @@ public class ConsentActivity extends BaseActivity {
         String consent = preferences.getConsent();
         Log.d("CONSENT, LOGIN",consent + preferences.isUserLoggedIn());
         if (consent.equals("YES")) {
-            Intent intentLauncher = new Intent(this, AboutActivity.class);
+            Intent intentLauncher = new Intent(this, SignUpActivity.class);
             startActivity(intentLauncher);
         } else {
             //show terms to accept
@@ -43,7 +43,7 @@ public class ConsentActivity extends BaseActivity {
                     preferences.setConsent("YES");
                     preferences.setPrivacy("YES");
                     preferences.setTerms("YES");
-                    Intent intent = new Intent(getBaseContext(), AboutActivity.class);
+                    Intent intent = new Intent(getBaseContext(), SignUpActivity.class);
                     startActivity(intent);
                 }
             });
